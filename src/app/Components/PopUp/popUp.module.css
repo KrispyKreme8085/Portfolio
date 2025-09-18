@@ -1,0 +1,80 @@
+.popUp {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%); 
+    /* width: 800px;
+    height: 700px; */
+    background-color: #c1c9c8;
+    box-shadow: 
+        inset 3px 3px 1px white,
+        3px 3px 1px black
+    ;
+}
+
+.popUpHeader {
+    background-color: #c1c9c8;
+    box-shadow: 
+        inset 3px 3px 1px white,
+        3px 0px 1px black;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#img {
+    position: absolute;
+    left: 10px;
+}
+
+#img:hover {
+    cursor: pointer;
+}
+
+.popUpHeader h1 {
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.background {
+    flex: 1 1 auto;       /* allow it to grow */
+    margin: 0 5px 5px 5px;
+    padding: 10px;        /* give some spacing */
+    background-color: black;
+    color: white;          /* text color */
+    overflow: auto;        /* scroll if content is big */
+    white-space: pre-wrap; /* preserve line breaks */
+}
+
+
+.background p {
+    color: white;
+    padding: 0px 10px 0px 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+}
+
+.buttons p {
+    margin: 0 5px 0 5px;
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background-color: #c1c9c8;
+    box-shadow: 
+        inset 3px 3px 1px white,
+        3px 3px 1px black
+    ;
+}
+
+.buttons p:hover {
+    cursor: pointer;
+}
