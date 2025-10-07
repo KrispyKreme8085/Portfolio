@@ -27,45 +27,56 @@
         inset 3px 3px 1px black
     ;
     height: 50px;
-    width: 100px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
 }
 
-#calendar {
-    margin-top: 16px;
-    margin-left: 20px;
-    background-color: #c1c9c8;
-    box-shadow: 
-        inset 3px 3px 1px white,
-        3px 3px 1px black
-    ;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-#calendar:hover {
-    cursor: pointer;
-}
-
-#time {
+#minesweeper {
     background-color: #c1c9c8;
     box-shadow: 
         3px 3px 1px white,
         inset 3px 3px 1px black
     ;
+    margin-left: 15px;
     height: 50px;
-    width: 100px;
+    width: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    z-index: 5;
+}
+
+#time {
+    background-color: #c1c9c8;
+    box-shadow: 
+        3px 3px 1px black,
+        inset 3px 3px 1px white
+    ;
+    height: 50px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#date {
+    background-color: #c1c9c8;
+    box-shadow: 
+        3px 3px 1px black,
+        inset 3px 3px 1px white
+    ;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 15px;
 }
 
 .left {
@@ -73,5 +84,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.centerWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 

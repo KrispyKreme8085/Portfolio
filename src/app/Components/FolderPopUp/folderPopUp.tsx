@@ -1,22 +1,23 @@
 "use client";
 import Folder from "../Folder/folder";
 import PopUp from "../PopUp/popUp";
+import Minesweeper from "../Minesweeper/minesweeper";
 import { useState, useEffect } from "react";
+import styles from "./folderPopUp.module.css";
 
 interface Props {
   name: string;
   image: string;
+  onClose: () => void;
+  onOpen: () => void;
+  isOpen: boolean;
 }
 
-export default function FolderPopUp({ name, image }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function FolderPopUp({ name, image, onOpen, onClose, isOpen }: Props) {
   const [content, setContent] = useState<string>("");
 
-  const closePopUp = () => setIsOpen(false);
-  const openPopUp = () => setIsOpen(true);
-
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && name !== "Minesweeper") {
       fetch(`/texts/${name}.txt`)
         .then((res) => res.text())
         .then(setContent)
@@ -25,11 +26,31 @@ export default function FolderPopUp({ name, image }: Props) {
   }, [isOpen, name]);
 
   return (
-    <div>
-      <Folder name={name} image={image} onOpen={openPopUp} />
-      {isOpen ? (
-        <PopUp title={name} content={<pre style={{ whiteSpace: "pre-wrap" }}>{content}</pre>} onClose={closePopUp} />
-      ) : null}
+    <div className={styles.container}>
+      <Folder
+        name={name}
+        image={image}
+        onOpen={onOpen}
+        size={name == "Minesweeper" ? 75 : 150}
+      />
+
+      {isOpen && (
+        <div className={styles.popupFixed}>
+          {name === "Minesweeper" ? (
+            <Minesweeper onClose={onClose} />
+          ) : (
+            <PopUp
+              title={name}
+              content={
+                <pre style={{ whiteSpace: "pre-wrap", padding: 0, margin: 0 }}>
+                  {content}
+                </pre>
+              }
+              onClose={onClose}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 }
