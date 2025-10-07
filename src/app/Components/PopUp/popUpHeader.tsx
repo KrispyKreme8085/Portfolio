@@ -11,7 +11,7 @@ type PopUpHeaderProps = {
 export default function PopUpHeader({ onIncrease, onDecrease, onClose, title }: PopUpHeaderProps) {
     return (
         <div className={styles.popUpHeader}>
-            <Image onClick={onClose} id={styles.img} src="/close.png" width={20} height={20} alt='close' />
+            <Image onClick={onClose} id={styles.img} src="/images/close.png" width={20} height={20} alt='close' />
             <h1>{title}</h1>
             <div className={styles.buttons}>
                 <p onClick={onIncrease} style={{ cursor: "pointer" }}>+</p>

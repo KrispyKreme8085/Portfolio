@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 .popUp {
     display: flex;
     flex-direction: column;
@@ -19,14 +21,16 @@
     box-shadow: 
         inset 3px 3px 1px white,
         3px 0px 1px black;
-    height: 50px;
-    width: 100%;
+    /* height: 120px; */
+    /* width: 100%; */
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 #img {
-    position: absolute;
+    position: relative;
     left: 10px;
 }
 
@@ -35,20 +39,26 @@
 }
 
 .popUpHeader h1 {
-    margin: 0 auto;
+    margin: 0;
     font-size: 18px;
+    text-align: center;
+    flex: 1; 
 }
 
-.background {
-    flex: 1 1 auto;       /* allow it to grow */
+.background, .background * {
+    flex: 1 1 auto;
     margin: 0 5px 5px 5px;
-    padding: 10px;        /* give some spacing */
+    padding: 10px;
     background-color: black;
-    color: white;          /* text color */
-    overflow: auto;        /* scroll if content is big */
-    white-space: pre-wrap; /* preserve line breaks */
+    color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    font-family: "VT323", monospace !important;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
 }
-
 
 .background p {
     color: white;
@@ -58,8 +68,8 @@
 .buttons {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    right: 10px;
+    gap: 10px; 
+    position: relative; 
 }
 
 .buttons p {
