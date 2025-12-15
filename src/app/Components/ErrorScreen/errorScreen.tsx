@@ -5,16 +5,14 @@ import styles from './errorScreen.module.css';
 
 export default function ErrorScreen({
         error,
-        reset,
     }: {
         error: Error & { digest?: string };
-        reset: () => void;
     }) {
     useEffect(() => {
     console.error(error);
     }, [error]);
 
-    var errorFace = ':{'
+    const errorFace = ':{'
 
     return (
         <div className={styles.center}>

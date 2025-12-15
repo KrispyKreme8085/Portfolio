@@ -30,7 +30,8 @@ export default function FolderPopUp({ name, image, onOpen, onClose, isOpen }: Pr
     } else {
       setImage(image)
     }
-  })
+  }, [image, isOpen, content]);
+
 
   useEffect(() => {
     if (isOpen && name !== "Minesweeper") {

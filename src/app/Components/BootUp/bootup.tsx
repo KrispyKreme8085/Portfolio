@@ -1,13 +1,13 @@
 "use client";
 import styles from "./bootup.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface BootScreenProps {
   onFinish: () => void;
 }
 
 export default function BootScreen({ onFinish }: BootScreenProps) {
-  const messages = [
+  const messages = useMemo(() => [
     "Power check OK",
     "Initializing system core...",
     "CPU detected",
@@ -22,7 +22,7 @@ export default function BootScreen({ onFinish }: BootScreenProps) {
     "Synchronizing system clock...",
     "Finalizing startup sequence...",
     "System ready"
-  ];
+  ], []);
 
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);

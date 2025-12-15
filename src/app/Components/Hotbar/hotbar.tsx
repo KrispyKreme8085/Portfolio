@@ -2,13 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./hotbar.module.css";
 
-interface HotbarProps {
-    onClose: () => void;
-    onOpen: () => void;
-    isOpen: boolean;
-}
-
-export default function Hotbar({onClose, onOpen, isOpen}: HotbarProps) {
+export default function Hotbar() {
     const [time, setTime] = useState("");
     const [date, setDate] = useState("");
 

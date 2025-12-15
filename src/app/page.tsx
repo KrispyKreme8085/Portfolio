@@ -24,7 +24,6 @@ export default function Home() {
 
   const closePopUp = () => setOpenFolder(null);
   const openPopUp = (index: number) => setOpenFolder(index);
-  const resetError = () => setError(null);
 
   useEffect(() => {
     const updateGridSize = () => {
@@ -78,14 +77,6 @@ export default function Home() {
     });
   }, [randomPositions, totalSquares]);
 
-  const triggerError = () => {
-    try {
-      throw new Error("This is a test error!");
-    } catch (err) {
-      setError(err as Error);
-    }
-  };
-
   return (
     <>
       {!booted ? (
@@ -93,16 +84,11 @@ export default function Home() {
       ) : (
         <div className={styles.page}>
           {error ? (
-            <ErrorScreen error={error} reset={resetError} />
+            <ErrorScreen error={error} />
           ) : (
             <div className={styles.body}>
               {/* <button onClick={triggerError}>Test Error</button> */}
-              <Hotbar
-                isOpen={openFolder === 0}
-                onOpen={() => openPopUp(0)}
-                onClose={closePopUp}
-              />
-
+              <Hotbar />
               <div
                 className={styles.grid}
                 style={{
