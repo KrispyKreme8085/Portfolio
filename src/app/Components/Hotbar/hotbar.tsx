@@ -44,7 +44,7 @@ export default function Hotbar({onClose, onOpen, isOpen}: HotbarProps) {
     return (
         <div className={styles.hotbar}>
             <div className={styles.items} id={styles.left}>
-                <p id={styles.home}>PORTFOLIO</p>
+                {/* <p id={styles.home}>PORTFOLIO</p> */}
             </div>
             <div className={styles.items} id={styles.right}>
                 <p id={styles.date}>{date}</p>

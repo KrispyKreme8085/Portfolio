@@ -1,0 +1,11 @@
+--- BiteByte ---
+BiteByte is a project I built that is used at a local summer camp that is used for keeping inventory in the kitchen.
+It uses NextJS, MongoDB, and Node.js
+
+
+--- Topside Tipoff ---
+Topside Tipoff is a website that I worked that is used for a local basketball tournement.
+It uses NextJS
+Link: https://topsidetipoff.com/
+
+
