@@ -21,7 +21,8 @@ export default function BootScreen({ onFinish }: BootScreenProps) {
     "Network interface online",
     "Synchronizing system clock...",
     "Finalizing startup sequence...",
-    "System ready"
+    "System ready",
+    "Hello, welcome back!"
   ], []);
 
   const [lineIndex, setLineIndex] = useState(0);
@@ -39,14 +40,14 @@ export default function BootScreen({ onFinish }: BootScreenProps) {
     if (charIndex < currentLine.length) {
       const timer = setTimeout(() => {
         setCharIndex(charIndex + 1);
-      }, 20);
+      }, 15);
       return () => clearTimeout(timer);
     } else {
       const timer = setTimeout(() => {
         setOutput(prev => [...prev, currentLine]);
         setLineIndex(lineIndex + 1);
         setCharIndex(0);
-      }, 120);
+      }, 20);
       return () => clearTimeout(timer);
     }
   }, [charIndex, lineIndex, messages, onFinish]);
