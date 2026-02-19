@@ -10,8 +10,9 @@ import BootScreen from "./Components/BootUp/bootup";
 export default function Home() {
   const folders = [
     { name: "Contact Info" },
-    { name: "Projects" },
+    { name: "Client Projects" },
     { name: "About Me"},
+    { name: "Other Projects" },
     { name: "Minesweeper", image: "sweeperFlag" },
   ];
 
