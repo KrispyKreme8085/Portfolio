@@ -1,0 +1,24 @@
+.folder {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    font-size: 15px;
+}
+
+.folder h2 {
+    position: absolute;
+    top: 115px;
+    text-align: center;
+}
+
+.folder:hover {
+    cursor: pointer;
+}
+

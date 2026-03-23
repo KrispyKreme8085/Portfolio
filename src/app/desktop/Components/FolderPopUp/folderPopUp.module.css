@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.popupFixed {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 5000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.bodyTitle {
+  text-align: center;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.popupFixed a {
+  color: #00ffff;
+  text-decoration: underline;
+  word-break: break-all;
+  padding: 0;
+}
+
+.text {
+  padding: 0;
+  margin: 0;
+}
+
+
+

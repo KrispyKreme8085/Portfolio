@@ -1,0 +1,69 @@
+.statusBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;
+    align-items: center;
+    font-size: 15px;
+}
+
+.battery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15px;
+    width: 30px;
+}
+
+.mainBattery {
+    position: relative;
+    height: 100%;
+    width: 91%;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.batteryTop {
+    height: 50%;
+    width: 10%;
+    border: 2px solid black;
+    border-left: none;
+    background-color: white;
+}
+
+.percentage {
+    position: absolute;
+    background-color: green;
+    height: 100%;
+}
+
+.signal {
+    height: 20px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topBar {
+    width: 100%;
+    height: 4px;
+    border: 2px solid black;
+    background-color: #c1c9c8;
+}
+
+.middleBar {
+    width: 50%;
+    height: 4px;
+    border: 2px solid black;
+    background-color: #c1c9c8;
+}
+
+.bottomBar {
+    width: 4px;
+    height: 4px;
+    border: 2px solid black;
+    background-color: #c1c9c8;
+}
