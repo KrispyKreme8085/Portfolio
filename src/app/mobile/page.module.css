@@ -1,0 +1,11 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.appsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -51,6 +51,11 @@ export default function FolderPopUp({ name, image, onOpen, onClose, isOpen }: Pr
             .replace(
               /\bmailto:([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,})\b/g,
               '<a href="mailto:$1">$1</a>'
+            )
+
+            .replace(
+              /!!(.*?)!!/g,
+              '<strong style="color: red; margin-bottom: -30px; display: block; text-align: center;">$1</strong>'
             );
 
           setContent(html);
