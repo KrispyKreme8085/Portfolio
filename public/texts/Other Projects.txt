@@ -14,6 +14,9 @@ Link: https://imageshrinker.karsonmellott.dev/
 A short game where it lies to you
 Link: https://lyinggame.karsonmellott.dev/
 
+--- Side Quest ---
+Side Quest is a social media app I built intended for the app. store. It gives you a random quest each day to complete. You can post and see others Side Quests.
+
 --- Three.gun ---
 Three.gun is a 3D web game I built using ThreeJS.
 Link: https://threegun.karsonmellott.dev/
