@@ -12,8 +12,9 @@ export default function Home() {
     { name: "Contact Info" },
     { name: "Client Projects" },
     { name: "About Me"},
-    { name: "Other Projects" },
+    { name: "Personal Projects" },
     { name: "Minesweeper", image: "sweeperFlag" },
+    { name: "Resume", image: "file" }
   ];
 
   const [booted, setBooted] = useState(false);
@@ -22,9 +23,16 @@ export default function Home() {
   const [error, setError] = useState<Error | null>(null);
   const [gridSizeX, setGridSizeX] = useState(9);
   const gridSizeY = 4;
+  const resumeFolderId = folders.findIndex((folder) => folder.name === "Resume") + 1;
 
   const closePopUp = () => setOpenFolder(null);
-  const openPopUp = (index: number) => setOpenFolder(index);
+  const openPopUp = (folderId: number) => {
+    if (folderId === resumeFolderId) {
+      window.location.href = "/pdfs/karsonmellottresume.pdf";
+      return;
+    }
+    setOpenFolder(folderId);
+  };
 
   useEffect(() => {
     const updateGridSize = () => {

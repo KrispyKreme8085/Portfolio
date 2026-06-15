@@ -17,7 +17,7 @@ export default function App({ name, image, onOpen, onClose, isOpen }: Props) {
     const [content, setContent] = useState<string>("");
 
     useEffect(() => {
-        if (isOpen && name !== "Minesweeper") {
+        if (isOpen && name !== "Minesweeper" && name !== "Resume") {
         fetch(`/texts/${name}.txt`)
             .then((res) => res.text())
             .then((text) => {
