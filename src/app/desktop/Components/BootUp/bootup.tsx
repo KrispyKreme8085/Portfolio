@@ -31,7 +31,7 @@ export default function BootScreen({ onFinish }: BootScreenProps) {
 
   useEffect(() => {
     if (lineIndex >= messages.length) {
-      const timer = setTimeout(onFinish, 800);
+      const timer = setTimeout(onFinish, 500);
       return () => clearTimeout(timer);
     }
 
