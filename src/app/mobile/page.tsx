@@ -13,14 +13,21 @@ export default function Home() {
         { name: "Contact Info", image: "contactme" },
         { name: "Client Projects", image: "folderclosed" },
         { name: "Personal Projects", image: "folderclosed" },
+        { name: "Resume", image: "file" }
         // { name: "Minesweeper", image: "sweeperFlag" },
     ]
 
     const [openApp, setOpenApp] = useState<number | null>(null);
+    const resumeAppId = apps.findIndex((app) => app.name === "Resume");
 
     const closePopUp = () => setOpenApp(null);
-    const openPopUp = (index: number) => setOpenApp(index);
-
+    const openPopUp = (appId: number) => {
+        if (appId === resumeAppId) {
+            window.location.href = "/pdfs/karsonmellottresume.pdf";
+            return;
+        }
+        setOpenApp(appId);
+    };
     return (
         <div className={styles.page}>
             <StatusBar></StatusBar>
