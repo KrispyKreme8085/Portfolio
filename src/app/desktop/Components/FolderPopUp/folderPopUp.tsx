@@ -4,6 +4,7 @@ import PopUp from "../PopUp/popUp";
 import Minesweeper from "../Minesweeper/minesweeper";
 import { useState, useEffect } from "react";
 import styles from "./folderPopUp.module.css";
+import { div } from "framer-motion/client";
 
 interface Props {
   name: string;
@@ -34,7 +35,7 @@ export default function FolderPopUp({ name, image, onOpen, onClose, isOpen }: Pr
 
 
   useEffect(() => {
-    if (isOpen && name !== "Minesweeper") {
+    if (isOpen && name !== "Minesweeper" && name !== "Resume") {
       fetch(`/texts/${name}.txt`)
         .then((res) => res.text())
         .then((text) => {
@@ -62,6 +63,7 @@ export default function FolderPopUp({ name, image, onOpen, onClose, isOpen }: Pr
         })
         .catch(() => setContent("Error loading file"));
     }
+
   }, [isOpen, name]);
 
   return (
@@ -70,7 +72,7 @@ export default function FolderPopUp({ name, image, onOpen, onClose, isOpen }: Pr
         name={name}
         image={formattedImage}
         onOpen={onOpen}
-        size={name == "Minesweeper" ? 75 : 150}
+        size={name == "Minesweeper" ? (75) : name === "Resume" ? (75) : (150)}
       />
 
       {isOpen && (
