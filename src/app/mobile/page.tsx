@@ -12,7 +12,7 @@ export default function Home() {
         { name: "About Me", image: "aboutme" },
         { name: "Contact Info", image: "contactme" },
         { name: "Client Projects", image: "folderclosed" },
-        { name: "Other Projects", image: "folderclosed" },
+        { name: "Personal Projects", image: "folderclosed" },
         // { name: "Minesweeper", image: "sweeperFlag" },
     ]
 
